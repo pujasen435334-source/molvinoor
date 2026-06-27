@@ -150,10 +150,34 @@ transition:transform 0.2s,box-shadow 0.2s;
 .hero{
 min-height:100vh;position:relative;z-index:1;
 display:flex;align-items:center;
-background:radial-gradient(ellipse at 60% 40%, rgba(14,51,32,0.35) 0%, transparent 65%),
-           radial-gradient(ellipse at 10% 80%, rgba(200,150,43,0.08) 0%, transparent 50%),
-           var(--dark);
+background:radial-gradient(ellipse at 70% 30%, rgba(10,80,40,0.7) 0%, transparent 60%),
+           radial-gradient(ellipse at 10% 80%, rgba(5,60,25,0.6) 0%, transparent 55%),
+           radial-gradient(ellipse at 50% 50%, rgba(8,55,30,0.4) 0%, transparent 80%),
+           linear-gradient(160deg, #051a0e 0%, #0a2e18 40%, #061510 100%);
 overflow:hidden;padding:100px 0 60px;
+}
+
+/* Islamic stars in hero */
+.hero-stars-deco{
+position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden;
+}
+.islamic-star{
+position:absolute;color:var(--gold2);opacity:0;
+animation:islamicTwinkle var(--ds,4s) ease-in-out infinite var(--dd,0s);
+font-size:var(--dsz,18px);
+}
+@keyframes islamicTwinkle{
+0%,100%{opacity:0;transform:scale(0.6) rotate(0deg)}
+50%{opacity:var(--dop,0.5);transform:scale(1) rotate(20deg)}
+}
+.crescent-deco{
+position:absolute;font-size:var(--csz,120px);color:var(--gold);
+opacity:var(--cop,0.04);pointer-events:none;
+animation:crescentFloat var(--cd,8s) ease-in-out infinite var(--cdd,0s);
+}
+@keyframes crescentFloat{
+0%,100%{transform:translateY(0) rotate(var(--cr,0deg))}
+50%{transform:translateY(-15px) rotate(var(--cr2,5deg))}
 }
 .hero-arc{
 position:absolute;bottom:-2px;left:0;width:100%;z-index:2;
@@ -649,8 +673,7 @@ body{padding-bottom:70px}
 <nav>
   <div class="nav-inner">
     <a href="#home" class="logo">
-      <div class="moon-icon">☪</div>
-      Molvi Noorshah
+      <img src="https://molvinoorshah.com/wp-content/uploads/2026/04/cropped-Islamic-1-259x86.png" alt="Molvi Noorshah" style="height:52px;width:auto;object-fit:contain;">
     </a>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
@@ -665,6 +688,29 @@ body{padding-bottom:70px}
 
 <!-- Hero -->
 <section class="hero" id="home">
+
+  <!-- Islamic Decorations -->
+  <div class="hero-stars-deco">
+    <!-- Crescents -->
+    <span class="crescent-deco" style="top:8%;left:5%;--csz:100px;--cop:0.07;--cd:9s;--cr:-15deg;--cr2:0deg">☪</span>
+    <span class="crescent-deco" style="bottom:15%;right:4%;--csz:140px;--cop:0.05;--cd:12s;--cdd:2s;--cr:10deg;--cr2:20deg">☪</span>
+    <span class="crescent-deco" style="top:50%;left:50%;--csz:300px;--cop:0.025;--cd:15s;--cdd:1s;--cr:0deg;--cr2:8deg">☪</span>
+
+    <!-- 8-pointed Islamic stars scattered -->
+    <span class="islamic-star" style="top:12%;left:18%;--dsz:14px;--ds:3.5s;--dd:0s;--dop:0.55">✦</span>
+    <span class="islamic-star" style="top:25%;left:85%;--dsz:10px;--ds:4s;--dd:0.8s;--dop:0.4">✧</span>
+    <span class="islamic-star" style="top:60%;left:8%;--dsz:18px;--ds:5s;--dd:1.2s;--dop:0.45">✦</span>
+    <span class="islamic-star" style="top:75%;left:75%;--dsz:12px;--ds:3s;--dd:0.3s;--dop:0.5">✧</span>
+    <span class="islamic-star" style="top:40%;left:92%;--dsz:16px;--ds:6s;--dd:2s;--dop:0.35">✦</span>
+    <span class="islamic-star" style="top:88%;left:30%;--dsz:11px;--ds:4.5s;--dd:1.5s;--dop:0.4">✧</span>
+    <span class="islamic-star" style="top:18%;left:60%;--dsz:20px;--ds:7s;--dd:0.5s;--dop:0.3">★</span>
+    <span class="islamic-star" style="top:70%;left:48%;--dsz:9px;--ds:3.2s;--dd:2.5s;--dop:0.5">✦</span>
+    <span class="islamic-star" style="top:5%;left:45%;--dsz:13px;--ds:5.5s;--dd:1.8s;--dop:0.45">✧</span>
+    <span class="islamic-star" style="top:82%;left:88%;--dsz:15px;--ds:4.2s;--dd:0.6s;--dop:0.4">✦</span>
+    <span class="islamic-star" style="top:48%;left:28%;--dsz:8px;--ds:3.8s;--dd:3s;--dop:0.35">✧</span>
+    <span class="islamic-star" style="top:32%;left:4%;--dsz:17px;--ds:6.5s;--dd:1s;--dop:0.4">✦</span>
+  </div>
+
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-eyebrow"><i class="fas fa-star-and-crescent"></i> Islamic Astrologer</div>
