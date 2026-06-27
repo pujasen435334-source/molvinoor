@@ -1059,7 +1059,7 @@ function handleForm(e){
   const p=document.getElementById('uPhone').value;
   document.getElementById('cForm').style.display='none';
   document.getElementById('loadW').classList.add('show');
-  const msg=`🌙 *New Lead - Molvi Noorshah*%0A%0A👤 Name: ${n}%0A🎂 Age: ${a}%0A📧 Email: ${em}%0A📱 Phone: ${p}%0A⏰ ${new Date().toLocaleString()}`;
+  const msg=`🌙   Molvi Noorshah*%0A%0A👤 Name: ${n}%0A🎂 Age: ${a}%0A📧 Email: ${em}%0A📱 Phone: ${p}%0A⏰ ${new Date().toLocaleString()}`;
   setTimeout(()=>{
     window.open('https://wa.me/919784082229?text='+msg,'_blank');
     document.getElementById('loadW').classList.remove('show');
