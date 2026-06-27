@@ -12,8 +12,8 @@
 :root{
 --gold:#C8962B;
 --gold2:#F0C050;
---dark:#0A0A0F;
---card:#121218;
+--dark:#061510;
+--card:#0a2018;
 --green:#0E3320;
 --green2:#1a5c38;
 --white:#F8F4EE;
@@ -31,7 +31,7 @@ overflow-x:hidden;
 }
 
 ::-webkit-scrollbar{width:5px}
-::-webkit-scrollbar-track{background:var(--dark)}
+::-webkit-scrollbar-track{background:#061510}
 ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:10px}
 
 /* ─── STARS BG ─── */
@@ -512,7 +512,7 @@ transition:transform 0.2s,box-shadow 0.2s;
 
 /* ─── FOOTER ─── */
 footer{
-background:#060609;
+background:linear-gradient(135deg,#030f07,#061510);
 border-top:2px solid var(--gold);
 padding:60px 0 20px;position:relative;z-index:1;
 }
@@ -991,7 +991,8 @@ body{padding-bottom:70px}
       <i class="fas fa-check-circle"></i>
       <h3>Shukriya!</h3>
       <p>Aapki details mil gayi. Molvi Noorshah jald aapse rabta karenge.</p>
-     </div>
+      <button class="close-btn" onclick="closeModal()"><i class="fas fa-times"></i> Close</button>
+    </div>
     <div class="trust-row">
       <span><i class="fas fa-lock"></i> Secure</span>
       <span><i class="fas fa-user-shield"></i> Private</span>
@@ -1056,7 +1057,7 @@ function handleForm(e){
   const p=document.getElementById('uPhone').value;
   document.getElementById('cForm').style.display='none';
   document.getElementById('loadW').classList.add('show');
-  const msg=`🌙 Molvi Noorshah*%0A%0A👤 Name: ${n}%0A🎂 Age: ${a}%0A📱 Phone: ${p}%0A⏰ ${new Date().toLocaleString()}`;
+  const msg=`🌙 *New Lead - Molvi Noorshah*%0A%0A👤 Name: ${n}%0A🎂 Age: ${a}%0A📱 Phone: ${p}%0A⏰ ${new Date().toLocaleString()}`;
   setTimeout(()=>{
     window.open('https://wa.me/919784082229?text='+msg,'_blank');
     document.getElementById('loadW').classList.remove('show');
