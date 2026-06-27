@@ -983,7 +983,6 @@ body{padding-bottom:70px}
     <form id="cForm" onsubmit="handleForm(event)">
       <div class="field"><label><i class="fas fa-user"></i> Aapka Naam</label><input type="text" id="uName" placeholder="Poora naam likhein" required></div>
       <div class="field"><label><i class="fas fa-calendar"></i> Aapki Umar</label><input type="number" id="uAge" placeholder="Umar" required min="18" max="100"></div>
-      <div class="field"><label><i class="fas fa-envelope"></i> Email</label><input type="email" id="uEmail" placeholder="Email address" required></div>
       <div class="field"><label><i class="fas fa-phone"></i> Phone Number</label><input type="tel" id="uPhone" placeholder="Phone number" required></div>
       <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send & Get Callback</button>
     </form>
@@ -1055,11 +1054,10 @@ function handleForm(e){
   e.preventDefault();
   const n=document.getElementById('uName').value;
   const a=document.getElementById('uAge').value;
-  const em=document.getElementById('uEmail').value;
   const p=document.getElementById('uPhone').value;
   document.getElementById('cForm').style.display='none';
   document.getElementById('loadW').classList.add('show');
-  const msg=`🌙   Molvi Noorshah*%0A%0A👤 Name: ${n}%0A🎂 Age: ${a}%0A📧 Email: ${em}%0A📱 Phone: ${p}%0A⏰ ${new Date().toLocaleString()}`;
+  const msg=`🌙 *New Lead - Molvi Noorshah*%0A%0A👤 Name: ${n}%0A🎂 Age: ${a}%0A📱 Phone: ${p}%0A⏰ ${new Date().toLocaleString()}`;
   setTimeout(()=>{
     window.open('https://wa.me/919784082229?text='+msg,'_blank');
     document.getElementById('loadW').classList.remove('show');
