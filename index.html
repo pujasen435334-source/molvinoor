@@ -6,6 +6,27 @@
 <title>Molvi Noorshah - Islamic Love Problem Solution</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- ─── META PIXEL INTEGRATION ─── -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+// ⚠️ CHANGE THIS WITH YOUR REAL META PIXEL ID
+fbq('init', 'YOUR_PIXEL_ID_HERE'); 
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
+/></noscript>
+<!-- ─── END META PIXEL ─── -->
+
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
@@ -34,7 +55,7 @@ overflow-x:hidden;
 ::-webkit-scrollbar-track{background:#061510}
 ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:10px}
 
-/* ─── STARS BG ─── */
+/* STARS BG */
 .stars-bg{
 position:fixed;top:0;left:0;width:100%;height:100%;
 pointer-events:none;z-index:0;overflow:hidden;
@@ -47,7 +68,7 @@ opacity:0;
 }
 @keyframes twinkle{0%,100%{opacity:0;transform:scale(0.5)}50%{opacity:0.7;transform:scale(1)}}
 
-/* ─── FLOATING BTNS ─── */
+/* FLOATING BTNS */
 .float-btns{
 position:fixed;right:16px;bottom:80px;z-index:1000;
 display:flex;flex-direction:column;gap:12px;
@@ -65,7 +86,7 @@ transition:transform 0.2s;
 .float-btn.call{background:linear-gradient(135deg,var(--gold),var(--gold2));animation-delay:0.4s}
 @keyframes floatPulse{0%,100%{box-shadow:0 4px 20px rgba(0,0,0,0.4)}50%{box-shadow:0 6px 30px rgba(200,150,43,0.5)}}
 
-/* ─── BOTTOM NAV (mobile fixed) ─── */
+/* BOTTOM NAV (mobile fixed) */
 .bottom-nav{
 position:fixed;bottom:0;left:0;width:100%;z-index:999;
 background:rgba(10,10,15,0.95);
@@ -83,13 +104,13 @@ text-decoration:none;transition:color 0.2s;
 .bnav-item i{font-size:20px}
 .bnav-item.active,.bnav-item:hover{color:var(--gold)}
 .bnav-cta{
-background:linear-gradient(135deg,var(--gold),var(--gold2));
-color:#000;border:none;border-radius:30px;
+background:linear-gradient(135deg,#25D366,#128C7E);
+color:#fff;border:none;border-radius:30px;
 padding:10px 20px;font-weight:700;font-size:13px;
 cursor:pointer;display:flex;align-items:center;gap:6px;
 }
 
-/* ─── TOP TICKER ─── */
+/* TOP TICKER */
 .ticker{
 background:linear-gradient(90deg,var(--green),var(--green2),var(--green));
 padding:9px 0;overflow:hidden;position:relative;
@@ -102,7 +123,7 @@ font-size:13px;font-weight:500;color:var(--gold2);
 @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .ticker-inner span{color:#fff}
 
-/* ─── NAV ─── */
+/* NAV */
 nav{
 background:linear-gradient(90deg,rgba(5,30,15,0.97),rgba(10,55,28,0.97),rgba(5,30,15,0.97));
 backdrop-filter:blur(20px);
@@ -146,7 +167,7 @@ transition:transform 0.2s,box-shadow 0.2s;
 }
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(200,150,43,0.4)}
 
-/* ─── HERO ─── */
+/* HERO */
 .hero{
 min-height:100vh;position:relative;z-index:1;
 display:flex;align-items:center;
@@ -157,7 +178,6 @@ background:radial-gradient(ellipse at 70% 30%, rgba(10,80,40,0.7) 0%, transparen
 overflow:hidden;padding:100px 0 60px;
 }
 
-/* Islamic stars in hero */
 .hero-stars-deco{
 position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden;
 }
@@ -224,18 +244,16 @@ box-shadow:0 6px 25px rgba(200,150,43,0.3);
 }
 .btn-gold:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(200,150,43,0.5)}
 .btn-outline{
-background:transparent;color:var(--gold2);
-border:1.5px solid var(--gold);border-radius:30px;
+background:#25D366;color:#fff;
+border:none;border-radius:30px;
 padding:14px 28px;font-size:15px;font-weight:600;cursor:pointer;
 display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;
 }
-.btn-outline:hover{background:rgba(200,150,43,0.1)}
+.btn-outline:hover{background:#128C7E}
 
-/* ─── HERO PHOTO ─── */
+/* HERO PHOTO */
 .hero-photo{position:relative;display:flex;justify-content:center}
-.photo-frame{
-position:relative;display:inline-block;
-}
+.photo-frame{position:relative;display:inline-block}
 .photo-ring{
 position:absolute;inset:-12px;border-radius:50% 40% 50% 40%;
 border:2px solid rgba(200,150,43,0.3);
@@ -263,7 +281,7 @@ font-size:12px;font-weight:700;white-space:nowrap;
 box-shadow:0 6px 20px rgba(200,150,43,0.4);
 }
 
-/* ─── TRUST STRIP ─── */
+/* TRUST STRIP */
 .trust-strip{
 padding:36px 0;
 background:linear-gradient(135deg,var(--green),var(--green2));
@@ -289,7 +307,7 @@ display:block;
 }
 .trust-label{font-size:12px;color:#aaa;margin-top:4px}
 
-/* ─── SECTION HEADER ─── */
+/* SECTION HEADER */
 .sec-head{text-align:center;margin-bottom:48px}
 .sec-eyebrow{
 display:inline-block;font-size:11px;letter-spacing:2px;
@@ -307,7 +325,7 @@ background:linear-gradient(90deg,var(--gold),var(--gold2));
 margin:14px auto 0;border-radius:2px;
 }
 
-/* ─── SERVICES ─── */
+/* SERVICES */
 .services{padding:80px 0;position:relative;z-index:1}
 .services-inner{max-width:1200px;margin:0 auto;padding:0 20px}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -346,7 +364,7 @@ transition:transform 0.2s;
 }
 .svc-btn:hover{transform:scale(1.05)}
 
-/* ─── WHY US ─── */
+/* WHY US */
 .why-us{
 padding:80px 0;
 background:linear-gradient(135deg,var(--green) 0%,var(--dark) 100%);
@@ -384,7 +402,7 @@ border:2px solid var(--border);
 box-shadow:0 20px 60px rgba(0,0,0,0.5);
 }
 
-/* ─── GALLERY ─── */
+/* GALLERY */
 .gallery{padding:80px 0;background:var(--dark);position:relative;z-index:1}
 .gallery-inner{max-width:1200px;margin:0 auto;padding:0 20px}
 .gallery-grid{
@@ -411,7 +429,7 @@ background:linear-gradient(transparent,rgba(0,0,0,0.85));
 }
 .gal-overlay h3{color:var(--gold2);font-size:15px;font-weight:600}
 
-/* ─── PROOF PHOTOS ─── */
+/* PROOF PHOTOS */
 .proof{padding:60px 0;background:linear-gradient(135deg,var(--green),var(--dark));position:relative;z-index:1}
 .proof-inner{max-width:1200px;margin:0 auto;padding:0 20px}
 .proof-grid{
@@ -433,7 +451,7 @@ background:linear-gradient(transparent,rgba(0,0,0,0.8));
 padding:12px;font-size:11px;color:var(--gold2);font-weight:600;
 }
 
-/* ─── TESTIMONIALS ─── */
+/* TESTIMONIALS */
 .testimonials{
 padding:80px 0;
 background:radial-gradient(ellipse at center, rgba(14,51,32,0.2) 0%, var(--dark) 70%);
@@ -467,7 +485,7 @@ font-weight:700;color:#000;font-size:14px;
 .testi-info h4{color:var(--gold2);font-size:14px;font-weight:600}
 .testi-info span{color:#666;font-size:12px}
 
-/* ─── CERTS ─── */
+/* CERTS */
 .certs{padding:60px 0;background:var(--green);position:relative;z-index:1}
 .certs-inner{max-width:1200px;margin:0 auto;padding:0 20px}
 .certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -482,7 +500,7 @@ transition:transform 0.3s;
 .cert-card h3{color:var(--white);font-size:16px;margin-bottom:6px}
 .cert-card p{color:var(--gold);font-size:13px}
 
-/* ─── TOP SERVICES LIST ─── */
+/* TOP SERVICES LIST */
 .top-svcs{padding:80px 0;background:var(--dark);position:relative;z-index:1}
 .top-svcs-inner{max-width:1200px;margin:0 auto;padding:0 20px}
 .top-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -510,7 +528,7 @@ transition:transform 0.2s,box-shadow 0.2s;
 }
 .wa-btn:hover{transform:scale(1.04);box-shadow:0 5px 20px rgba(37,211,102,0.35)}
 
-/* ─── FOOTER ─── */
+/* FOOTER */
 footer{
 background:linear-gradient(135deg,#030f07,#061510);
 border-top:2px solid var(--gold);
@@ -530,7 +548,7 @@ padding-top:20px;text-align:center;color:#444;font-size:12px;
 }
 .footer-bottom a{color:var(--gold)}
 
-/* ─── MODAL ─── */
+/* MODAL */
 .modal-bg{
 display:none;position:fixed;inset:0;
 background:rgba(0,0,0,0.8);
@@ -594,16 +612,8 @@ animation:spin 0.8s linear infinite;margin:0 auto;
 .success-wrap i{font-size:56px;color:#25D366;display:block;margin-bottom:12px}
 .success-wrap h3{color:var(--gold2);margin-bottom:8px;font-size:18px}
 .success-wrap p{color:#777;font-size:13px}
-.close-btn{
-margin-top:18px;padding:11px 28px;
-background:rgba(200,150,43,0.15);
-color:var(--gold2);border:1px solid var(--gold);
-border-radius:25px;cursor:pointer;font-size:14px;font-weight:600;
-transition:background 0.2s;
-}
-.close-btn:hover{background:rgba(200,150,43,0.25)}
 
-/* ─── SHIMMER PROMPT BADGE ─── */
+/* SHIMMER PROMPT BADGE */
 .promo-badge{
 display:inline-flex;align-items:center;gap:8px;
 background:linear-gradient(135deg,rgba(14,51,32,0.6),rgba(200,150,43,0.1));
@@ -620,7 +630,7 @@ animation:shimBadge 2.5s ease-in-out infinite;
 .promo-badge p{font-size:13px;color:#ccc;line-height:1.5}
 .promo-badge i{color:var(--gold2);font-size:20px;min-width:22px}
 
-/* ─── RESPONSIVE ─── */
+/* RESPONSIVE */
 @media(max-width:900px){
 .hero-inner,.why-inner{grid-template-columns:1fr;text-align:center;gap:40px}
 .hero-photo{order:-1}
@@ -646,54 +656,51 @@ body{padding-bottom:70px}
 </head>
 <body>
 
-<!-- Stars -->
 <div class="stars-bg" id="starsBg"></div>
 
-<!-- Float Buttons -->
 <div class="float-btns">
   <button class="float-btn wa" onclick="openWA()" title="WhatsApp"><i class="fab fa-whatsapp"></i></button>
   <button class="float-btn call" onclick="openModal()" title="Call"><i class="fas fa-phone"></i></button>
 </div>
 
-<!-- Bottom Nav (mobile) -->
 <div class="bottom-nav">
   <a href="#home" class="bnav-item active"><i class="fas fa-home"></i>Home</a>
   <a href="#services" class="bnav-item"><i class="fas fa-star-and-crescent"></i>Services</a>
-  <button class="bnav-cta" onclick="openModal()"><i class="fas fa-phone"></i> Contact</button>
+  <button class="bnav-cta" onclick="openWA()"><i class="fab fa-whatsapp"></i> Chat Now</button>
   <a href="#testimonials" class="bnav-item"><i class="fas fa-comments"></i>Reviews</a>
   <a href="#contact" class="bnav-item"><i class="fas fa-envelope"></i>Contact</a>
 </div>
 
-<!-- Ticker -->
 <div class="ticker">
   <div class="ticker-inner" id="ticker"></div>
 </div>
 
+<nav>
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <div class="moon-icon">☪</div> Molvi Noorshah
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="openModal()"><i class="fas fa-phone"></i> Direct Call</button>
+  </div>
+</nav>
 
-
-<!-- Hero -->
 <section class="hero" id="home">
-
-  <!-- Islamic Decorations -->
   <div class="hero-stars-deco">
-    <!-- Crescents -->
     <span class="crescent-deco" style="top:8%;left:5%;--csz:100px;--cop:0.07;--cd:9s;--cr:-15deg;--cr2:0deg">☪</span>
     <span class="crescent-deco" style="bottom:15%;right:4%;--csz:140px;--cop:0.05;--cd:12s;--cdd:2s;--cr:10deg;--cr2:20deg">☪</span>
     <span class="crescent-deco" style="top:50%;left:50%;--csz:300px;--cop:0.025;--cd:15s;--cdd:1s;--cr:0deg;--cr2:8deg">☪</span>
 
-    <!-- 8-pointed Islamic stars scattered -->
     <span class="islamic-star" style="top:12%;left:18%;--dsz:14px;--ds:3.5s;--dd:0s;--dop:0.55">✦</span>
     <span class="islamic-star" style="top:25%;left:85%;--dsz:10px;--ds:4s;--dd:0.8s;--dop:0.4">✧</span>
     <span class="islamic-star" style="top:60%;left:8%;--dsz:18px;--ds:5s;--dd:1.2s;--dop:0.45">✦</span>
     <span class="islamic-star" style="top:75%;left:75%;--dsz:12px;--ds:3s;--dd:0.3s;--dop:0.5">✧</span>
-    <span class="islamic-star" style="top:40%;left:92%;--dsz:16px;--ds:6s;--dd:2s;--dop:0.35">✦</span>
-    <span class="islamic-star" style="top:88%;left:30%;--dsz:11px;--ds:4.5s;--dd:1.5s;--dop:0.4">✧</span>
-    <span class="islamic-star" style="top:18%;left:60%;--dsz:20px;--ds:7s;--dd:0.5s;--dop:0.3">★</span>
-    <span class="islamic-star" style="top:70%;left:48%;--dsz:9px;--ds:3.2s;--dd:2.5s;--dop:0.5">✦</span>
-    <span class="islamic-star" style="top:5%;left:45%;--dsz:13px;--ds:5.5s;--dd:1.8s;--dop:0.45">✧</span>
-    <span class="islamic-star" style="top:82%;left:88%;--dsz:15px;--ds:4.2s;--dd:0.6s;--dop:0.4">✦</span>
-    <span class="islamic-star" style="top:48%;left:28%;--dsz:8px;--ds:3.8s;--dd:3s;--dop:0.35">✧</span>
-    <span class="islamic-star" style="top:32%;left:4%;--dsz:17px;--ds:6.5s;--dd:1s;--dop:0.4">✦</span>
   </div>
 
   <div class="hero-inner">
@@ -704,14 +711,14 @@ body{padding-bottom:70px}
         <span class="sub">Love Problem Specialist</span>
       </h1>
       <p class="hero-desc">
-        32+ saal ka tajurba. Duniya bhar mein 98,000+ khush clients. Love, marriage, family, black magic removal — har masla ka hal Quran aur Ilm-e-Nujum se. UK · USA · Canada · Australia.
+        32+ saal ka tajurba. Duniya bhar mein 98,000+ khush clients. Love, marriage, family, black magic removal — har masla ka hal Quran aur Ilm-e-Nujum se.
       </p>
       <div class="promo-badge">
         <i class="fas fa-bolt"></i>
-        <p>Agar aapka boyfriend/girlfriend ne block kiya hai — <strong style="color:var(--gold2)">24 ghante mein unblock guarantee</strong>. Ek baar zaroor milein.</p>
+        <p>Agar aapka boyfriend/girlfriend ne block kiya hai — <strong style="color:var(--gold2)">24 ghante mein unblock guarantee</strong>.</p>
       </div>
       <div class="hero-btns" style="margin-top:24px">
-        <button class="btn-gold" onclick="openModal()"><i class="fas fa-phone"></i> Abhi Contact Karein</button>
+        <button class="btn-gold" onclick="openModal()"><i class="fas fa-phone"></i> Request Call Back</button>
         <button class="btn-outline" onclick="openWA()"><i class="fab fa-whatsapp"></i> WhatsApp Chat</button>
       </div>
     </div>
@@ -727,16 +734,15 @@ body{padding-bottom:70px}
   <svg class="hero-arc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="#0A0A0F" d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z"/></svg>
 </section>
 
-<!-- Trust Strip -->
 <section class="trust-strip">
   <div class="trust-inner">
     <div class="trust-item">
       <span class="trust-num" data-t="32">0k+</span>
-      <div class="trust-label">Love Marriage Cases Solved</div>
+      <div class="trust-label">Love Marriage Cases</div>
     </div>
     <div class="trust-item">
       <span class="trust-num" data-t="98">0k+</span>
-      <div class="trust-label">Happy Clients Worldwide</div>
+      <div class="trust-label">Happy Clients</div>
     </div>
     <div class="trust-item">
       <span class="trust-num" data-t="22">0k+</span>
@@ -744,12 +750,11 @@ body{padding-bottom:70px}
     </div>
     <div class="trust-item">
       <span class="trust-num" data-t="32">0+</span>
-      <div class="trust-label">Years of Experience</div>
+      <div class="trust-label">Years Experience</div>
     </div>
   </div>
 </section>
 
-<!-- Gallery / Proof Photos -->
 <section class="gallery" id="gallery">
   <div class="gallery-inner">
     <div class="sec-head">
@@ -774,7 +779,6 @@ body{padding-bottom:70px}
   </div>
 </section>
 
-<!-- Services -->
 <section class="services" id="services">
   <div class="services-inner">
     <div class="sec-head">
@@ -783,215 +787,34 @@ body{padding-bottom:70px}
       <div class="sec-line"></div>
     </div>
     <div class="services-grid">
-      <div class="svc-card"><div class="svc-icon"><i class="fas fa-heart"></i></div><h3>Love Problem Solution</h3><p>Powerful astrological remedies se apna pyaar wapas paayein. 100% results guarantee.</p><button class="svc-btn" onclick="openModal()"><i class="fas fa-phone"></i> Call Now</button></div>
-      <div class="svc-card"><div class="svc-icon"><i class="fas fa-ring"></i></div><h3>Love Marriage Specialist</h3><p>Inter-caste, parental approval, shaadi mein rukawat — sab masail ka hal milega yahan.</p><button class="svc-btn" onclick="openModal()"><i class="fas fa-phone"></i> Call Now</button></div>
-      <div class="svc-card"><div class="svc-icon"><i class="fas fa-users"></i></div><h3>Family Problem Solution</h3><p>Ghar mein jhagde, shohar biwi ka ikhtilaaf — islami ilm se sukoon wapas laayein.</p><button class="svc-btn" onclick="openModal()"><i class="fas fa-phone"></i> Call Now</button></div>
-      <div class="svc-card"><div class="svc-icon"><i class="fas fa-heart-crack"></i></div><h3>Breakup Problem Solution</h3><p>24 ghante mein ex wapas. Toot rahe rishton ko jodne ka azmuda nuskha.</p><button class="svc-btn" onclick="openModal()"><i class="fas fa-phone"></i> Call Now</button></div>
-      <div class="svc-card"><div class="svc-icon"><i class="fas fa-shield-halved"></i></div><h3>Black Magic Removal</h3><p>Kala jadoo, nazar, buri rooh — ruhaani ilaj se mukammal nijaat paayein.</p><button class="svc-btn" onclick="openModal()"><i class="fas fa-phone"></i> Call Now</button></div>
-      <div class="svc-card"><div class="svc-icon"><i class="fas fa-star-and-crescent"></i></div><h3>Vashikaran Specialist</h3><p>Islamic wazifa aur vashikaran se apne chaahe insaan ko qareeb laayein.</p><button class="svc-btn" onclick="openModal()"><i class="fas fa-phone"></i> Call Now</button></div>
+      <div class="svc-card"><div class="svc-icon"><i class="fas fa-heart"></i></div><h3>Love Problem Solution</h3><p>Powerful astrological remedies se apna pyaar wapas paayein. 100% results guarantee.</p><button class="svc-btn" onclick="openWA()"><i class="fab fa-whatsapp"></i> Chat Now</button></div>
+      <div class="svc-card"><div class="svc-icon"><i class="fas fa-ring"></i></div><h3>Love Marriage Specialist</h3><p>Inter-caste, parental approval, shaadi mein rukawat — sab masail ka hal milega yahan.</p><button class="svc-btn" onclick="openWA()"><i class="fab fa-whatsapp"></i> Chat Now</button></div>
+      <div class="svc-card"><div class="svc-icon"><i class="fas fa-users"></i></div><h3>Family Problem Solution</h3><p>Ghar mein jhagde, shohar biwi ka ikhtilaaf — islami ilm se sukoon wapas laayein.</p><button class="svc-btn" onclick="openWA()"><i class="fab fa-whatsapp"></i> Chat Now</button></div>
     </div>
   </div>
 </section>
 
-<!-- Why Us -->
-<section class="why-us" id="about">
-  <div class="why-inner">
-    <div class="why-content">
-      <h2>Hum Kyun Behtar Hain?</h2>
-      <p>Molvi Noorshah ek mashoor Islamic astrologer hain. Jo insaan mohabbat mein dhoka khaa chuka ho, ya jiska rista toot raha ho — unke liye ek baar zaroor milein. Duniya ke kisi bhi kone se call kar saktay hain.</p>
-      <div class="feature-list">
-        <div class="feat-item"><i class="fas fa-check-circle"></i> 32+ Saal ka Tajurba</div>
-        <div class="feat-item"><i class="fas fa-check-circle"></i> 98,000+ Khush Clients Worldwide</div>
-        <div class="feat-item"><i class="fas fa-check-circle"></i> 100% Privacy Guaranteed</div>
-        <div class="feat-item"><i class="fas fa-check-circle"></i> 24/7 Customer Support</div>
-        <div class="feat-item"><i class="fas fa-check-circle"></i> Ek Baar Solution — Umr Bhar Sukoon</div>
-        <div class="feat-item"><i class="fas fa-check-circle"></i> UK · USA · Canada · Australia Serve Karte Hain</div>
-      </div>
-      <button class="btn-gold" onclick="openModal()"><i class="fas fa-phone"></i> Molvi Noorshah Se Milein</button>
-    </div>
-    <div class="why-img-wrap">
-      <img src="https://i.ibb.co/rGVLmZsy/IMG-20260628-WA0011.jpg" alt="Molvi Noorshah">
-    </div>
-  </div>
-</section>
-
-<!-- Proof Section -->
-<section class="proof">
-  <div class="proof-inner">
-    <div class="sec-head">
-      <div class="sec-eyebrow">Client Results</div>
-      <h2 class="sec-title">Hamare Kaam Ka Saboot</h2>
-      <div class="sec-line"></div>
-    </div>
-    <div class="proof-grid">
-      <div class="proof-item">
-        <img src="https://i.ibb.co/PzJ4T9zY/IMG-20260628-WA0004.jpg" alt="Proof 4">
-        <div class="proof-label">✦ Client Feedback</div>
-      </div>
-      <div class="proof-item">
-        <img src="https://i.ibb.co/C3SqwHgS/IMG-20260628-WA0001.jpg" alt="Proof 5">
-        <div class="proof-label">✦ Love Back Success</div>
-      </div>
-      <div class="proof-item">
-        <img src="https://i.ibb.co/LXG3c0B3/IMG-20260628-WA0010.jpg" alt="Proof 6">
-        <div class="proof-label">✦ Marriage Success</div>
-      </div>
-      <div class="proof-item">
-        <img src="https://i.ibb.co/rGVLmZsy/IMG-20260628-WA0011.jpg" alt="Proof 7">
-        <div class="proof-label">✦ Problem Solved</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Certs -->
-<section class="certs">
-  <div class="certs-inner">
-    <div class="sec-head">
-      <div class="sec-eyebrow">Our Pride</div>
-      <h2 class="sec-title">Certificates & Awards</h2>
-      <div class="sec-line"></div>
-    </div>
-    <div class="certs-grid">
-      <div class="cert-card"><i class="fas fa-award"></i><h3>Molvi Noorshah</h3><p>Gold Medalist Astrologer</p></div>
-      <div class="cert-card"><i class="fas fa-certificate"></i><h3>Molvi Noorshah</h3><p>Certified Vashikaran Expert</p></div>
-      <div class="cert-card"><i class="fas fa-trophy"></i><h3>Molvi Noorshah</h3><p>International Astrology Award</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section class="testimonials" id="testimonials">
-  <div class="testi-inner">
-    <div class="sec-head">
-      <div class="sec-eyebrow">Client Reviews</div>
-      <h2 class="sec-title">Clients Ki Raay</h2>
-      <div class="sec-line"></div>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card"><div class="testi-quote">"</div><div class="testi-stars">★★★★★</div><p class="testi-text">Excellent tips given by Guruji, I have consulted many astrologers but have not got good predictions like him. He suggested so many things which helped me in my life.</p><div class="testi-author"><div class="testi-av">MS</div><div class="testi-info"><h4>Mohammad Sadik</h4><span>USA</span></div></div></div>
-      <div class="testi-card"><div class="testi-quote">"</div><div class="testi-stars">★★★★★</div><p class="testi-text">Sir has great experience. Either choosing right career or tackling personal problems, he always helped like a true guru. Very thankful.</p><div class="testi-author"><div class="testi-av">NP</div><div class="testi-info"><h4>Niraj Patel</h4><span>UK</span></div></div></div>
-      <div class="testi-card"><div class="testi-quote">"</div><div class="testi-stars">★★★★★</div><p class="testi-text">Meri sachi mohabbat 24 ghante mein wapas aa gayi! Aap truly blessed hain. Mujhe vishwas nahi tha lekin ye ho gaya.</p><div class="testi-author"><div class="testi-av">SG</div><div class="testi-info"><h4>Sourabh Gupta</h4><span>Australia</span></div></div></div>
-      <div class="testi-card"><div class="testi-quote">"</div><div class="testi-stars">★★★★★</div><p class="testi-text">Family completely changed after consulting. My family is now happy and peaceful. Thank you from the bottom of my heart Molvi ji.</p><div class="testi-author"><div class="testi-av">SK</div><div class="testi-info"><h4>Shabbir Khan</h4><span>Canada</span></div></div></div>
-      <div class="testi-card"><div class="testi-quote">"</div><div class="testi-stars">★★★★★</div><p class="testi-text">Mere bete ka bhavisya sudharne ki aasha chod di thi, aaj aapki wajah se main sukhi hun. Bhagwan aapko kamyabi de.</p><div class="testi-author"><div class="testi-av">KS</div><div class="testi-info"><h4>Kuldeep Singh</h4><span>UK</span></div></div></div>
-      <div class="testi-card"><div class="testi-quote">"</div><div class="testi-stars">★★★★★</div><p class="testi-text">Aap se jab se judi hoon meri life badal gayi. Family ke saath bahut khush hun jo maine socha nahi tha. Shukriya Molvi ji.</p><div class="testi-author"><div class="testi-av">AK</div><div class="testi-info"><h4>Amandeep Kaur</h4><span>Canada</span></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- Top Services -->
-<section class="top-svcs">
-  <div class="top-svcs-inner">
-    <div class="sec-head">
-      <div class="sec-eyebrow">All Solutions</div>
-      <h2 class="sec-title">Hamare Top Services</h2>
-      <div class="sec-line"></div>
-    </div>
-    <div class="top-grid">
-      <div class="top-card">
-        <h4><i class="fas fa-heart" style="color:var(--gold);margin-right:8px"></i>Love Problem Solution</h4>
-        <ul>
-          <li>Love Problem Specialist</li>
-          <li>One Side Love</li>
-          <li>Love Relationship Problem</li>
-          <li>Love Life Problem Solution</li>
-          <li>Ex Love Back</li>
-          <li>Mohabbat Mein Dhoka</li>
-        </ul>
-        <a href="#" class="wa-btn" onclick="openWA();return false"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a>
-      </div>
-      <div class="top-card">
-        <h4><i class="fas fa-user-friends" style="color:var(--gold);margin-right:8px"></i>Boyfriend / Girlfriend</h4>
-        <ul>
-          <li>Get Your Love Back</li>
-          <li>Lost Love Back Specialist</li>
-          <li>Get Ex Girlfriend Back</li>
-          <li>Get Ex Boyfriend Back</li>
-          <li>Unblock 24 Hours</li>
-          <li>Breakup Solution</li>
-        </ul>
-        <a href="#" class="wa-btn" onclick="openWA();return false"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a>
-      </div>
-      <div class="top-card">
-        <h4><i class="fas fa-ring" style="color:var(--gold);margin-right:8px"></i>Marriage & Family</h4>
-        <ul>
-          <li>Love Marriage Specialist</li>
-          <li>Inter-Caste Marriage</li>
-          <li>Husband Wife Dispute</li>
-          <li>Black Magic Removal</li>
-          <li>Family Problem Solution</li>
-          <li>Court Case Problem</li>
-        </ul>
-        <a href="#" class="wa-btn" onclick="openWA();return false"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
 <footer id="contact">
   <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h3>☪ Molvi Noorshah</h3>
-        <p>Islamic Astrologer. Vashikaran, Love, Black Magic, Family — har masle ka hal. Ahmedabad, Rajasthan, INDIA.</p>
-        <p style="margin-top:12px;color:var(--gold)"><i class="fas fa-map-marker-alt"></i> Ahmedabad, Rajasthan</p>
-      </div>
-      <div class="footer-col">
-        <h3>Our Services</h3>
-        <ul>
-          <li><a href="#">Love Marriage Solution</a></li>
-          <li><a href="#">Love Problem Solution</a></li>
-          <li><a href="#">Lost Love Back</a></li>
-          <li><a href="#">Husband Wife Dispute</a></li>
-          <li><a href="#">Black Magic Removal</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#testimonials">Reviews</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Contact</h3>
-        <p>
-          <i class="fas fa-phone" style="color:var(--gold)"></i> +91 97840 82229<br><br>
-          <i class="fas fa-clock" style="color:var(--gold)"></i> 24/7 Available<br><br>
-          <i class="fas fa-shield-alt" style="color:var(--gold)"></i> 100% Privacy<br><br>
-          <i class="fas fa-check" style="color:var(--gold)"></i> Lifetime Solution
-        </p>
-      </div>
-    </div>
     <div class="footer-bottom">
-      <p>Disclaimer: Results may vary. Astrological remedies depend on many factors. No absolute guarantees.</p>
-      <p style="margin-top:8px">© 2026 Molvi Noorshah. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+      <p>Disclaimer: Results may vary. Astrological remedies depend on many factors.</p>
+      <p style="margin-top:8px">© 2026 Molvi Noorshah. All Rights Reserved.</p>
     </div>
   </div>
 </footer>
 
-<!-- Modal -->
 <div class="modal-bg" id="modalBg">
   <div class="modal">
     <span class="modal-x" onclick="closeModal()">×</span>
     <h2>☪ Contact Now</h2>
-    <p class="sub">Apni details bhejein — Molvi Noorshah khud call karenge!</p>
+    <p class="sub">Apni details bhejein — Instant Solution Paayein!</p>
     <form id="cForm" onsubmit="handleForm(event)">
       <div class="field"><label><i class="fas fa-user"></i> Aapka Naam</label><input type="text" id="uName" placeholder="Poora naam likhein" required></div>
       <div class="field"><label><i class="fas fa-calendar"></i> Aapki Umar</label><input type="number" id="uAge" placeholder="Umar" required min="18" max="100"></div>
       <div class="field"><label><i class="fas fa-phone"></i> Phone Number</label><input type="tel" id="uPhone" placeholder="Phone number" required></div>
-      <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send & Get Callback</button>
+      <button type="submit" class="submit-btn"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</button>
     </form>
-    <div class="loading-wrap" id="loadW"><div class="spinner"></div><p>Sending details...</p></div>
-    <div class="success-wrap" id="succW">
-      <i class="fas fa-check-circle"></i>
-      <h3>Shukriya!</h3>
-      <p>Aapki details mil gayi. Molvi Noorshah jald aapse rabta karenge.</p>
-     </div>
+    <div class="loading-wrap" id="loadW"><div class="spinner"></div><p>Redirecting to WhatsApp...</p></div>
     <div class="trust-row">
       <span><i class="fas fa-lock"></i> Secure</span>
       <span><i class="fas fa-user-shield"></i> Private</span>
@@ -1001,9 +824,9 @@ body{padding-bottom:70px}
 </div>
 
 <script>
-// Stars
+// Stars Bg
 const sb=document.getElementById('starsBg');
-for(let i=0;i<80;i++){
+for(let i=0;i<60;i++){
   const s=document.createElement('div');
   s.className='star';
   const size=Math.random()*3+1;
@@ -1012,41 +835,26 @@ for(let i=0;i<80;i++){
 }
 
 // Ticker
-const msgs=['🌙 24/7 Available','💫 Love Problem Solution','❤️ 98k+ Happy Clients','✨ 24 Hours Result','🌙 Islamic Astrologer','💛 Get Your Love Back','☪ Worldwide Services','⭐ 32+ Years Experience'];
+const msgs=['🌙 24/7 Available','💫 Love Problem Solution','❤️ 98k+ Happy Clients','✨ 24 Hours Result'];
 const t=document.getElementById('ticker');
 const full=[...msgs,...msgs].map(m=>`<span>${m}</span>`).join('');
 t.innerHTML=full+full;
 
-// Counters
-function animateCounters(){
-  document.querySelectorAll('[data-t]').forEach(el=>{
-    const target=+el.getAttribute('data-t');
-    const unit=el.textContent.includes('+')?'+':'';
-    let cur=0;const dur=1800;const inc=target/(dur/16);
-    const timer=setInterval(()=>{
-      cur+=inc;
-      if(cur>=target){el.textContent=target+'k'+unit;clearInterval(timer)}
-      else el.textContent=Math.floor(cur)+'k'+unit;
-    },16);
-  });
+function openModal(){
+  document.getElementById('modalBg').classList.add('open');
+  document.body.style.overflow='hidden';
 }
-const so=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){animateCounters();so.disconnect()}})},{threshold:0.4});
-so.observe(document.querySelector('.trust-strip'));
 
-// Modal
-function openModal(){document.getElementById('modalBg').classList.add('open');document.body.style.overflow='hidden'}
 function closeModal(){
   document.getElementById('modalBg').classList.remove('open');
   document.body.style.overflow='';
-  document.getElementById('cForm').style.display='block';
-  document.getElementById('loadW').classList.remove('show');
-  document.getElementById('succW').classList.remove('show');
-  document.getElementById('cForm').reset();
 }
-document.getElementById('modalBg').addEventListener('click',function(e){if(e.target===this)closeModal()});
 
 function openWA(){
-  window.open('https://wa.me/918619660991?text='+encodeURIComponent('Assalam Alaikum Molvi Noorshah ji, mujhe madad chahiye. Please mujhse contact karein.'),'_blank');
+  if (typeof fbq === 'function') {
+    fbq('track', 'Lead');
+  }
+  window.open('https://wa.me/918619660991?text='+encodeURIComponent('Assalam Alaikum Molvi Noorshah ji, mujhe madad chahiye.'),'_blank');
 }
 
 function handleForm(e){
@@ -1054,31 +862,20 @@ function handleForm(e){
   const n=document.getElementById('uName').value;
   const a=document.getElementById('uAge').value;
   const p=document.getElementById('uPhone').value;
+  
+  if (typeof fbq === 'function') {
+    fbq('track', 'Lead');
+  }
+
   document.getElementById('cForm').style.display='none';
   document.getElementById('loadW').classList.add('show');
-  const msg=`🌙 *New Lead - Molvi Noorshah*%0A%0A👤 Name: ${n}%0A🎂 Age: ${a}%0A📱 Phone: ${p}%0A⏰ ${new Date().toLocaleString()}`;
+  
+  const msg=`🌙 *New Lead - Molvi Noorshah*%0A%0A👤 Name: ${n}%0A🎂 Age: ${a}%0A📱 Phone: ${p}`;
   setTimeout(()=>{
-    window.open('https://wa.me/918619660991?text='+msg,'_blank');
-    document.getElementById('loadW').classList.remove('show');
-    document.getElementById('succW').classList.add('show');
-  },1500);
+    window.location.href = 'https://wa.me/918619660991?text=' + msg;
+  }, 1000);
 }
 
-// Scroll reveal
-const revEls=document.querySelectorAll('.svc-card,.testi-card,.cert-card,.top-card,.proof-item,.gal-item');
-revEls.forEach(el=>{el.style.cssText='opacity:0;transform:translateY(28px);transition:all 0.6s ease'});
-const ro=new IntersectionObserver(ens=>{ens.forEach(en=>{if(en.isIntersecting){en.target.style.opacity='1';en.target.style.transform='translateY(0)';ro.unobserve(en.target)}})},{threshold:0.1});
-revEls.forEach(el=>ro.observe(el));
-
-// Bottom nav highlight
-document.querySelectorAll('.bnav-item').forEach(a=>{
-  a.addEventListener('click',()=>{
-    document.querySelectorAll('.bnav-item').forEach(x=>x.classList.remove('active'));
-    a.classList.add('active');
-  });
-});
-
-// Auto popup after 3 seconds
 setTimeout(()=>{ openModal(); }, 3000);
 </script>
 </body>
