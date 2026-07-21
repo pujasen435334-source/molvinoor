@@ -631,21 +631,27 @@ animation:shimBadge 2.5s ease-in-out infinite;
 .promo-badge i{color:var(--gold2);font-size:20px;min-width:22px}
 
 /* RESPONSIVE */
+/* RESPONSIVE */
 @media(max-width:900px){
-.hero-inner,.why-inner{grid-template-columns:1fr;text-align:center;gap:40px}
-.hero-photo{order:-1}
-.photo-frame img{width:230px;height:300px}
-.services-grid,.testi-grid,.certs-grid,.top-grid{grid-template-columns:1fr}
-.trust-inner,.proof-grid{grid-template-columns:repeat(2,1fr)}
-.gallery-grid{grid-template-columns:repeat(2,1fr)}
-.gal-item.big{grid-row:auto;grid-column:auto}
-.footer-grid{grid-template-columns:repeat(2,1fr)}
-.nav-links,.nav-cta{display:none}
-.bottom-nav{display:flex}
-body{padding-bottom:70px}
-.float-btns{bottom:90px}
-.feature-list{text-align:left}
-.hero-btns{justify-content:center}
+  /* Mobile me Top Header (Nav) ko hide karne ke liye */
+  nav {
+    display: none !important;
+  }
+
+  .hero-inner,.why-inner{grid-template-columns:1fr;text-align:center;gap:40px}
+  .hero-photo{order:-1}
+  .photo-frame img{width:230px;height:300px}
+  .services-grid,.testi-grid,.certs-grid,.top-grid{grid-template-columns:1fr}
+  .trust-inner,.proof-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .gal-item.big{grid-row:auto;grid-column:auto}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-links,.nav-cta{display:none}
+  .bottom-nav{display:flex}
+  body{padding-bottom:70px}
+  .float-btns{bottom:90px}
+  .feature-list{text-align:left}
+  .hero-btns{justify-content:center}
 }
 @media(max-width:540px){
 .trust-inner,.proof-grid{grid-template-columns:1fr 1fr}
